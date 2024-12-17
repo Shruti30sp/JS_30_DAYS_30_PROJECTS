@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+.container {
+  position: relative;
+  margin: 100px;
+  padding: 120px;
+  width: 250px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: aliceblue;
+  color: black;
+}
+.main h2 {
+  position: absolute;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  left: 30px;
+  top: 20px;
+  color: rgb(39, 39, 117);
+}
+.main img {
+  position: absolute;
+  width: 27px;
+  left: 145px;
+  top: 36px;
+}
+.main input {
+  position: absolute;
+  background-color: rgba(218, 220, 221, 0.547);
+  padding: 15px;
+  border: none;
+  border-radius: 23px;
+  width: 390px;
+  left: 30px;
+  top: 90px;
+}
+.main button {
+  position: absolute;
+  border-radius: 23px;
+  border: none;
+  width: 90px;
+  height: 45px;
+  left: 362px;
+  top: 90px;
+  background-color: rgb(237, 101, 52);
+  color: white;
+}
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  position: relative;
+  cursor: pointer;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50px;
+  background-image: url(img/oval.png);
+  background-size: cover;
+  background-position: center;
+  top: 9px;
+  left: 18px;
+}
+ul li.check{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.check::before{
+    background-image: url(/img/check.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+ul li span:hover{
+ background: #5555552d;
+}
