@@ -1,5 +1,6 @@
 const inputField = document.getElementById("input");
 const listContainer = document.getElementById("tasks");
+
 function addInput() {
   if (inputField.value === "") {
     alert("Please write something to add!");
