@@ -1,0 +1,41 @@
+let speech = new SpeechSynthesisUtterance();
+ ---- This creates an instance of SpeechSynthesisUtterance, which is used to convert text to speech.
+
+let voices = [];
+----This will store all available speech synthesis voices.
+The voices are loaded asynchronously, so we need to wait for them before using them.
+
+
+let voicesSelect = document.querySelector("select");
+----This selects the <select> element from the HTML.
+It will be used to display the available voices so the user can choose one.
+
+window.speechSynthesis.onvoiceschanged = () => {
+-----Some browsers load voices asynchronously, so we use onvoiceschanged to wait for them.
+
+
+  voices = window.speechSynthesis.getVoices();
+-----This retrieves all available voices and stores them in the voices array.
+
+  speech.voice = voices[0];
+------Sets the default voice to the first available voice.
+
+ voices.forEach(
+    (voice, i) => (voicesSelect.options[i] = new Option(voice.name, i))
+  );
+------This populates the <select> dropdown with the list of available voices.
+new Option(voice.name, i) creates a new <option> for each voice.
+
+
+voicesSelect.addEventListener("change", () => {
+  speech.voice = voices[voicesSelect.value];
+});
+-------Listens for a change in the <select> dropdown.
+When the user selects a different voice, speech.voice is updated to the selected one.
+
+
+  speech.text = document.querySelector("textarea").value;
+------Gets the text from the <textarea> and assigns it to speech.text.
+
+window.speechSynthesis.speak(speech);
+-------Calls speak() to read the text aloud using the selected voice.

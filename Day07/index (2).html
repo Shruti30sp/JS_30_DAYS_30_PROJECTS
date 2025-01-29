@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>CURD OPERATIONS</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <form id="record-form">
+          <h1>Student Registration</h1>
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="number" id="age" placeholder="Age" required />
+          <input type="text" id="email" placeholder="email" required />
+          <button type="submit">Save</button>
+          <input type="hidden" id="edit-index" value="-1">
+        </form>
+      </div>
+      <div class="right">
+        <h1>Records</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Email</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="record_list"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Record Management</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <form id="record-form">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="number" id="age" placeholder="Age" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="hidden" id="edit-index" value="-1">
+    <button type="submit">Save</button>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="record-list"></tbody>
+  </table>
+  <script src="/script.js"></script>
+</body>
+</html> -->
